@@ -129,22 +129,23 @@ Thats what I am looking for...
             const form = document.getElementById('contact-form');
             const formMessage = document.getElementById('form-message');
             
-            const lastSentDate = localStorage.getItem('lastSentDate');
-            const today = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
-            
-            if (lastSentDate === today) {
-                form.style.display = 'none';
-                formMessage.textContent = 'Sie können nur einmal pro Tag eine Nachricht senden.';
-            }
-            
             form.addEventListener('submit', (event) => {
-                event.preventDefault();
-                localStorage.setItem('lastSentDate', today);
-                form.style.display = 'none';
-                formMessage.textContent = 'Ihre Nachricht wurde gesendet. Vielen Dank!';
-                // Hier könntest du noch den tatsächlichen Versand der E-Mail implementieren, z.B. über eine API.
+                const messageField = document.getElementById('message');
+
+                // Überprüfen, ob das Nachrichtenfeld leer ist
+                if (messageField.value.trim() === '') {
+                    event.preventDefault();
+                    formMessage.textContent = 'Bitte geben Sie eine Nachricht ein.';
+                    formMessage.style.color = 'red';
+                    return; // Beende die Funktion, um das Formular nicht zu senden
+                }
+
+                // Wenn das Nachrichtenfeld nicht leer ist, wird das Formular gesendet
+                formMessage.textContent = 'Ihre Nachricht wird gesendet...';
+                formMessage.style.color = 'green';
             });
         });
     </script>
 </body>
 </html>
+
