@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="Website css.css">
 </head>
 <body>
-  
-</form>
 
     <header>
         <div class="container">
@@ -44,11 +42,11 @@ Hi. Ich bin Tim Ruther, 19 Jahre alt und studiere Maschinenbau an der Technische
             <h2>Fähigkeiten</h2>
             <div class="skills-list">
                 <div class="skill">C++</div>
-                <div class="skill">SolideWorks</div>
-                <div class="skill">3D-Druck anwendungen</div>
+                <div class="skill">SolidWorks</div>
+                <div class="skill">3D-Druck Anwendungen</div>
                 <div class="skill">Basics C#</div>
-                <div class="skill">technisches Zeichnen</div>
-                <div class="skill">Microsoft office</div>
+                <div class="skill">Technisches Zeichnen</div>
+                <div class="skill">Microsoft Office</div>
             </div>
         </div>
     </section>
@@ -57,11 +55,9 @@ Hi. Ich bin Tim Ruther, 19 Jahre alt und studiere Maschinenbau an der Technische
         <div class="container">
             <h2>Erfahrungen</h2>
             <div class="portfolio-item">
-                <h3>bisherigen Jobs:</h3>
-                 
+                <h3>Bisherige Jobs:</h3>
                 Dauer: 4 Jahre
-                <br>
-                <br>
+                <br><br>
                 <p>Mit 14 Jahren hatte ich meinen ersten Job bei der Delimes Energy GmbH. Dabei handelt es sich um ein aufstrebendes Unternehmen im Bereich Photovoltaiktechnik und Elektroinstallation. Ich habe hier als Student in meiner Freizeit gearbeitet und hatte daher schon früh ein Gespür dafür, wie man Geld verdient und was es bedeutet, zu arbeiten.</p>
             </div>
             <div class="portfolio-item">
@@ -69,52 +65,40 @@ Hi. Ich bin Tim Ruther, 19 Jahre alt und studiere Maschinenbau an der Technische
                
                 <h4>Hennig GmbH</h4>
                 
-                Dauer: 3 Weeks
-                <br>
-                <br>
+                Dauer: 3 Wochen
+                <br><br>
                 Während meines Praktikums bei der Hennig GmbH konnte ich umfangreiche praktische Erfahrungen in der Fertigungstechnik sammeln. Ich erlernte die Bedienung und Programmierung von CNC-Maschinen und vertiefte meine Kenntnisse im Fräsen. Außerdem hatte ich die Gelegenheit, mit industriellen 3D-Druckern zu arbeiten, was mir wertvolle Einblicke in moderne Fertigungstechnologien verschaffte.
-<br>
-<br>
-<h4> LT Ultra </h4>
+                <br><br>
+                <h4>LT Ultra</h4>
+                Dauer: 2 Wochen
+                <br><br>
+                Bei LT Ultra arbeitete ich in einem innovativen Umfeld, das sich auf die Entwicklung und Produktion von Messtechnik für mikrometergenaue Bauteile spezialisiert hat. Ich habe die Produktion präziser Komponenten unterstützt, die am CERN verwendet werden. Dieses Praktikum ermöglichte es mir, tiefere Einblicke in die präzise Fertigung und die hohen Anforderungen wissenschaftlicher Instrumentierung zu gewinnen.</p>
 
-Dauer: 2 Weeks
-<br>
-<br>
-Bei LT Ultra arbeitete ich in einem innovativen Umfeld, das sich auf die Entwicklung und Produktion von Messtechnik für mikrometergenaue Bauteile spezialisiert hat. Ich habe die Produktion präziser Komponenten unterstützt, die am CERN verwendet werden. Dieses Praktikum ermöglichte es mir, tiefere Einblicke in die präzise Fertigung und die hohen Anforderungen wissenschaftlicher Instrumentierung zu gewinnen.</p>
-
-<h3> Werksstudent.... </h3>
-Thats what I am looking for...
+                <h3>Werkstudent...</h3>
+                That's what I am looking for...
             </div>
         </div>
     </section>
     
     <section id="contact" class="section">
         <div class="container">
+            <h2>Kontakt</h2>
+            <form id="contact-form" action="https://formspree.io/f/mzzplero" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
 
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required><br><br>
 
-  
-   <h2>Kontakt</h2>
-    <form id="contact-form"  action="https://formspree.io/f/mzzplero" method="post">
-    <label for="Name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    
+                <label for="betreff">Betreff:</label>
+                <input type="text" id="betreff" name="betreff" required><br><br>
 
-              <label for="email">E-Mail:</label>
-              <input type="email" id="email" name="email" required>
+                <label for="message">Nachricht:</label>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
 
-         <required><br><br>
-
-              <label for="betreff">Betreff:</label>
-              <input type="text" id="betreff" name="betreff" required><br><br>
-    
-              <label for="message">Nachricht:</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-    
-    <input type="submit" value="Absenden">
-        
-   
-          <p id="form-message"></p>
-        </form>
+                <input type="submit" value="Absenden">
+                <p id="form-message"></p>
+            </form>
         </div>
     </section>
     
@@ -148,4 +132,3 @@ Thats what I am looking for...
     </script>
 </body>
 </html>
-
