@@ -7,6 +7,7 @@ body {
                 linear-gradient(to bottom, #cce7ff, #0066cc); /* Muster über einem Farbverlauf */
     background-blend-mode: overlay; /* Mischen von Hintergrundfarbe und Muster */
     color: #333;
+    line-height: 1.6;
 }
 
 /* Header-Stile */
@@ -27,6 +28,7 @@ header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Flexibles Layout für kleinere Bildschirme */
 }
 
 .profile-image {
@@ -34,16 +36,19 @@ header .container {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    margin-bottom: 20px; /* Abstand für kleinere Bildschirme */
 }
 
 .header-text {
     flex: 1;
     margin-left: 20px;
+    text-align: center; /* Zentrierung für Mobilgeräte */
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
+    text-align: center;
 }
 
 header nav ul {
@@ -51,10 +56,12 @@ header nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Zentrierung für Mobilgeräte */
 }
 
 header nav ul li {
-    margin-left: 20px;
+    margin: 10px; /* Gleichmäßiger Abstand für alle Bildschirme */
 }
 
 header nav ul li a {
@@ -77,6 +84,7 @@ header nav ul li a {
 /* Abschnitt-Stile */
 .section {
     padding: 60px 20px;
+    text-align: center; /* Textzentrierung für Mobilgeräte */
 }
 
 .section:nth-of-type(even) {
@@ -99,6 +107,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center; /* Zentrierung für kleinere Bildschirme */
 }
 
 .skill {
@@ -106,13 +115,15 @@ h2 {
     color: #fff;
     padding: 10px;
     border-radius: 5px;
-    flex: 1 1 calc(25% - 10px);
+    flex: 1 1 calc(50% - 20px); /* Zwei Spalten Layout für größere Bildschirme */
     text-align: center;
+    margin-bottom: 10px; /* Abstand für kleinere Bildschirme */
 }
 
 /* Portfolio-Stile */
 .portfolio-item {
     margin-bottom: 20px;
+    text-align: center; /* Textzentrierung für Mobilgeräte */
 }
 
 .portfolio-item h3 {
@@ -123,6 +134,8 @@ h2 {
 form {
     display: grid;
     gap: 10px;
+    max-width: 600px;
+    margin: 0 auto; /* Zentrierung für Mobilgeräte */
 }
 
 form label {
@@ -134,6 +147,7 @@ form input, form textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box; /* Box-Sizing für konsistente Größenanpassung */
 }
 
 form button {
@@ -143,6 +157,7 @@ form button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    justify-self: flex-start; /* Ausrichtung unten links */
 }
 
 form button:hover {
@@ -155,4 +170,38 @@ footer {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+}
+
+/* Medienabfragen für verschiedene Bildschirmgrößen */
+
+/* Für Tablets (bis 768px) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+    .profile-image {
+        margin: 0 auto 20px; /* Zentrierung und Abstand */
+    }
+    .header-text {
+        margin-left: 0; /* Entfernen von Abstand für kleinere Bildschirme */
+    }
+    .skills-list .skill {
+        flex: 1 1 100%; /* Einspaltenlayout */
+    }
+}
+
+/* Für Mobilgeräte (bis 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em; /* Kleinere Schriftgröße für Mobilgeräte */
+    }
+    .header nav ul li {
+        margin: 5px; /* Reduzierter Abstand */
+    }
+    .section {
+        padding: 40px 20px; /* Reduzierte Polsterung */
+    }
+    .skills-list .skill {
+        flex: 1 1 100%; /* Einspaltenlayout */
+    }
 }
